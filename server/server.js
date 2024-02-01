@@ -20,7 +20,15 @@ const db = mysql.createConnection({
 
 // ENDPOINTS
 app.get('/', (req, res) => {
-    res.json({ message: 'Express-React connected!' });
+    res.json({message:"React & Express connected"})
+});
+
+app.get('/students', (req, res) => {
+    sql = "SELECT * FROM student_details"
+    db.query(sql, (err, result)=> {
+        if(err) res.json({message:"Server Error", err}) 
+        return res.json(result)
+    })
   });
 
 
