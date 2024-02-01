@@ -11,11 +11,11 @@ app.use(express.json())
 
 const port = 5000
 const db = mysql.createConnection({
-    host: "127.0.0.1",
+    host: "viaduct.proxy.rlwy.net",
     user: "root",
-    password: "melonmelon",
-    database: "students",
-    port: 3307
+    password: "-hHFgH2cg3Gag42c463HBHG2C3eF1BEd",
+    database: "railway",
+    port: 21763
 })
 db.connect((err) => {
     if (err) {
