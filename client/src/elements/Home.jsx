@@ -1,11 +1,17 @@
-import React from 'react'
+import { axios } from "axios";
+import React, { useEffect, useState } from "react";
 
 export function Home() {
-  return (
-    <div>
-      
-    </div>
-  )
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("/students")
+      .then(() => {
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  return <div>Home</div>;
 }
 
-export default Home
+export default Home;
