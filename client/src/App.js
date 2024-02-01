@@ -9,7 +9,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/")
+    fetch("https://students-backend-z9x8.onrender.com/")
       .then((res) => res.json())
       .then((data) => {setMessage(data.message)
         console.log('Server Message:', data.message);
